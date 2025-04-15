@@ -1,8 +1,9 @@
 import React from "react";
 
 
-const Recipe = () => {
-  return <h1>レシピコンポーネント</h1>;
+const Recipe = (props) => {
+  console.log(props)
+  return <h1>{props.mealData.name}</h1>;
 };
 
 export default Recipe;

@@ -4,7 +4,7 @@ const Form = (props) => {
   return (
     <form onSubmit={props.getMealData}>
       <input
-        onChange={(e) => setMealName(e.target.value)}
+        onChange={(e) => props.setMealName(e.target.value)}
         type="text"
         name="mealName"
         placeholder="料理名を英語で入力"

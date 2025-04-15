@@ -32,11 +32,12 @@ const App = () => {
       category: jsonData.meals[0].strCategory,
     });
   };
+
   return (
     <div>
       <Header />
       <Form setMealName={setMealName} getMealData={getMealData} />
-      <Recipe />
+      <Recipe mealData={mealData} />
     </div>
   );
 };
