@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import headerImg from "../assets/header.jpg";
 
 const Header = () => {
   return (
-    <div>Header</div>
-  )
-}
+    <header>
+      <Link to="/">
+        <img src={headerImg} alt="header-image" />
+      </Link>
+    </header>
+  );
+};
 
-export default Header
+export default Header;

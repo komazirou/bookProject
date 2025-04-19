@@ -5,8 +5,8 @@ import { Outlet } from "react-router-dom";
 
 const Layout = (props) => {
   return (
-    <div>
-      <div>
+    <div className="mode-body">
+      <div className="mode-container">
         <Header />
         <Form setMealName={props.setMealName} getMealData={props.getMealData} />
         <Outlet />
