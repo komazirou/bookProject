@@ -1,13 +1,17 @@
 import React from "react";
+import { useContext } from "react";
+import { AppContext } from "../context";
 
-const Form = (props) => {
+const Form = () => {
+  const contextValues = useContext(AppContext);
   return (
-    <form onSubmit={props.getMealData}>
+    <form onSubmit={contextValues.getMealData}>
       <input
-        onChange={(e) => props.setMealName(e.target.value)}
+        onChange={(e) => contextValues.setMealName(e.target.value)}
         type="text"
         name="mealName"
         placeholder="料理名を英語で入力"
+        value={contextValues.mealName}
       />
       <button>検索</button>
     </form>

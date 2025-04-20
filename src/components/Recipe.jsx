@@ -1,28 +1,31 @@
 import React from "react";
+import { useContext } from "react";
+import { AppContext } from "../context";
 
-const Recipe = (props) => {
+const Recipe = () => {
+  const contextValues = useContext(AppContext);
   return (
     <>
-      {props.mealData.id && (
-        <div>
-          <h2>{props.mealData.name}</h2>
+      {contextValues.mealData.id && (
+        <div className="recipe">
+          <h2>{contextValues.mealData.name}</h2>
           <p>
-            エリア<span>{props.mealData.area}</span>
+            エリア<span>{contextValues.mealData.area}</span>
           </p>
           <p>
-            カテゴリー<span>{props.mealData.category}</span>
+            カテゴリー<span>{contextValues.mealData.category}</span>
           </p>
 
           <img
-            src={props.mealData.img && props.mealData.img}
+            src={contextValues.mealData.img && contextValues.mealData.img}
             alt="meal-image"
           />
 
-          <p>{props.mealData.instructions}</p>
+          <p>{contextValues.mealData.instructions}</p>
           <p>
             ソース
             <span>
-              <a href={props.mealData.source}>{props.mealData.source}</a>
+              <a href={contextValues.mealData.source}>{contextValues.mealData.source}</a>
             </span>
           </p>
         </div>
