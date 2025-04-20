@@ -1,11 +1,12 @@
 import React from "react";
 import Recipe from "../components/Recipe";
-const Meal = (props) => {
-  return (
-    <div>
-      <Recipe mealData={props.mealData} />
-    </div>
-  );
+import { useContext } from "react";
+import { AppContext } from "../context";
+import Loading from "../components/loading";
+
+const Meal = () => {
+  const contextValues = useContext(AppContext);
+  return <div>{contextValues.loading ? <Loading/> : <Recipe/>}</div>;
 };
 
 export default Meal;

@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import React from "react";
-import headerImg from "../assets/header.jpg";
+import headerImg from "../assets/header-image.svg";
 
 const Header = () => {
   return (

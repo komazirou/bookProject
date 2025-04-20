@@ -3,12 +3,12 @@ import Header from "../components/Header";
 import Form from "../components/Form";
 import { Outlet } from "react-router-dom";
 
-const Layout = (props) => {
+const Layout = () => {
   return (
     <div className="mode-body">
-      <div className="mode-container">
+      <div className="container">
         <Header />
-        <Form setMealName={props.setMealName} getMealData={props.getMealData} />
+        <Form/>
         <Outlet />
       </div>
     </div>
